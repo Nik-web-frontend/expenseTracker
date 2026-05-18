@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <button id="theme">☀️</button>
+    <!-- heading -->
+    <h1 class="heading">Expense Tracker</h1>
+    <br><br>
+
+    <div class="income-expense">
+        <div class="card" style="box-shadow: 0px 0px 20px 5px lightblue;">
+            <h2 class="heading" id="balance">$0</h2>
+            <h3 class="heading">Your Balance</h3>
+        </div>
+        <div class="income card" style="box-shadow: 0px 0px 20px 5px lightgreen;">
+            <h2 id="income-amt">$0</h2>
+            <h3>Income</h3>
+        </div>
+        <div class="expense card" style="box-shadow: 0px 0px 20px 5px lightcoral;">
+            <h2 id="expense-amt">$0</h2>
+            <h3>Expense</h3>
+        </div>
+    </div>
+
+    <h3 style="text-align: center;">Add Transaction</h3>
+    <div class="form-container">
+        <form id="transaction-details">
+            <h2>Date:</h2>
+            <input type="date" id="date">
+            <h2>description</h2>
+            <input type="text" id="description" required>
+            <h2>Amount</h2>
+            <div class="amt-container">
+                <input type="number" id="amount" required>
+                <p id="inc-exp-btn">Income</p>
+            </div>
+            <br><br>
+            <button type="reset">Clear</button>
+            <button id="add" type="submit">Add Transaction</button>
+        </form>
+    </div>
+
+    <h2 id="historyHeading">Transaction History:</h2>
+    <div class="filters">
+        <input type="text" name="search" id="search" placeholder="Search Transactions...">
+        <select name="category" id="select">
+            <option value="All">All</option>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+        </select>
+
+    </div>
+
+
+    <div class="transactionHistory">
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
