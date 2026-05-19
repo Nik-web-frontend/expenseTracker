@@ -207,6 +207,26 @@ function calculation() {
 show()
 calculation()
 
+// theme
+let theme = document.getElementById('theme');
+let savedTheme = localStorage.getItem('theme');
+
+if(savedTheme === 'dark'){
+    document.body.classList.add("dark-theme");
+}
+
+theme.addEventListener('click', ()=>{
+    document.body.classList.toggle('dark-theme');
+    if(document.body.classList.contains('dark-theme')){
+        localStorage.setItem('theme', 'dark')
+        theme.textContent = 'Dark';
+    }
+    else{
+         localStorage.setItem('theme', 'light')
+         theme.textContent = 'Light'
+    }
+})
+
 
 
 
